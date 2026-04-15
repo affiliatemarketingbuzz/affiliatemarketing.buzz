@@ -394,6 +394,7 @@ body {
   clip-path: ellipse(50% 50% at 25% 50%);
 }
 
+/* — Decorative circle (responsive) — */
 .hero-circle {
   position: absolute;
   border: 1.5px solid rgba(37, 99, 235, 0.12);
@@ -403,12 +404,13 @@ body {
 }
 
 .hero-circle-1 {
-  width: 520px;
-  height: 520px;
+  width: clamp(300px, 28vw, 520px);
+  height: clamp(300px, 28vw, 520px);
   top: 12%;
   left: 28%;
 }
 
+/* — Decorative dots (responsive) — */
 .hero-dot {
   position: absolute;
   background: var(--primary);
@@ -431,6 +433,7 @@ body {
   left: 4%;
 }
 
+/* — Decorative diagonal lines — */
 .hero-diag {
   position: absolute;
   bottom: 55px;
@@ -457,6 +460,7 @@ body {
 .hero-diag span:nth-child(5) { top: 36px; }
 .hero-diag span:nth-child(6) { top: 45px; }
 
+/* — Hero content — */
 .hero-content {
   position: relative;
   z-index: 5;
@@ -499,6 +503,7 @@ body {
   animation: fadeInUp 0.6s ease 0.2s both;
 }
 
+/* — Hero image (zoom-safe) — */
 .hero-image-wrap {
   position: relative;
   z-index: 6;
@@ -512,15 +517,17 @@ body {
   margin-left: auto;
   border-radius: 0 0 0 40%;
   object-fit: cover;
-  height: 600px;
+height: clamp(520px, 40vw, 600px);
 }
 
+/* — Award badge (zoom-safe — uses % and clamp) — */
 .award-badge {
   position: absolute;
   bottom: 16%;
-  left: -35px;
-  width: 115px;
-  height: 115px;
+  left: 0;
+  transform: translateX(-30%);
+width: clamp(100px, 8vw, 115px);
+height: clamp(100px, 8vw, 115px);
   background: var(--white);
   border-radius: 50%;
   display: flex;
@@ -544,8 +551,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
+width: clamp(34px, 3vw, 40px);
+height: clamp(34px, 3vw, 40px);
   z-index: 2;
 }
 
@@ -566,7 +573,6 @@ body {
   height: 70px;
 }
 
-/* strips */
 .marquee-strip-1,
 .marquee-strip-2 {
   background: var(--accent);
@@ -577,7 +583,6 @@ body {
   width: 110%;
 }
 
-/* tilt */
 .marquee-strip-1 {
   top: 0;
   transform: rotate(-2.4deg);
@@ -590,15 +595,13 @@ body {
   opacity: 0.65;
 }
 
-/* track */
 .marquee-track {
   display: flex;
   align-items: center;
-  gap: 28px; /* 🔥 THIS controls equal spacing everywhere */
+  gap: 28px;
   width: max-content;
 }
 
-/* text */
 .marquee-text {
   font-size: 1.7rem;
   font-weight: 800;
@@ -608,14 +611,12 @@ body {
   white-space: nowrap;
 }
 
-/* star */
 .marquee-star {
-  font-size: 20px; /* match your image */
+  font-size: 20px;
   color: var(--dark);
   line-height: 1;
 }
 
-/* animation */
 .marquee-track-left {
   animation: marqueeLeft 16s linear infinite;
 }
@@ -633,6 +634,7 @@ body {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
+
 
 /* ══════════════════════════════════════════════════════════════
    SECTION 6: TOPICS — FREE FLOW MARQUEE STYLE
@@ -667,10 +669,9 @@ body {
   padding: 20px 0;
 }
 
-/* TRACK */
 .topics-track {
   display: flex;
-  gap: 32px; /* balanced spacing */
+  gap: 32px;
   animation: topicsScroll 25s linear infinite;
   width: max-content;
   will-change: transform;
@@ -685,15 +686,12 @@ body {
   100% { transform: translateX(-50%); }
 }
 
-/* ITEM (BIGGER NOW — 3 PER VIEW) */
 .topic-item {
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 18px;
-
-  width: 420px; /* 🔥 increased from 340px */
-
+  width: 420px;
   cursor: pointer;
   text-decoration: none;
   color: var(--text);
@@ -704,10 +702,9 @@ body {
   transform: translateY(-6px);
 }
 
-/* IMAGE (TALLER) */
 .topic-item-image {
   width: 100%;
-  height: 260px; /* 🔥 increased */
+  height: 260px;
   border-radius: 20px;
   overflow: hidden;
   background: var(--light-bg);
@@ -724,7 +721,6 @@ body {
   transform: scale(1.06);
 }
 
-/* FOOTER */
 .topic-item-footer {
   display: flex;
   align-items: center;
@@ -733,7 +729,7 @@ body {
 }
 
 .topic-item-text h3 {
-  font-size: 1.2rem; /* slightly bigger */
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--dark);
   margin-bottom: 4px;
@@ -745,7 +741,6 @@ body {
   font-weight: 500;
 }
 
-/* ARROW */
 .topic-item-arrow {
   width: 46px;
   height: 46px;
@@ -772,6 +767,7 @@ body {
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+
 
 /* ══════════════════════════════════════════════════════════════
    SECTION 7: NEWSLETTER
@@ -967,6 +963,7 @@ body {
   gap: 24px;
 }
 
+/* — Blog card (zoom-safe with aspect-ratio) — */
 .blog-card {
   background: var(--white);
   border-radius: var(--radius);
@@ -986,7 +983,7 @@ body {
 
 .blog-card-image {
   position: relative;
-  height: 218px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
@@ -995,6 +992,10 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
 }
 
 .blog-date {
@@ -1108,23 +1109,20 @@ body {
   align-items: center;
 }
 
-/* 🔥 IMAGE — NO CARD LOOK */
 .faq-image {
-  border-radius: 0;          /* remove card rounding */
-  overflow: visible;         /* allow natural image */
-  box-shadow: none;          /* ❌ remove shadow */
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
 }
 
-/* IMAGE ITSELF */
 .faq-image img {
   width: 100%;
-  height: auto;              /* natural height */
-  object-fit: contain;       /* no crop */
+  height: auto;
+  object-fit: contain;
   display: block;
-  max-height: 520px;         /* control size */
+  max-height: 520px;
 }
 
-/* TEXT */
 .faq-content h2 {
   font-family: var(--font-body);
   font-size: clamp(2rem, 3vw, 2.6rem);
@@ -1140,7 +1138,6 @@ body {
   line-height: 1.7;
 }
 
-/* FAQ ITEMS */
 .faq-item {
   border: 1.5px solid var(--border-light);
   border-radius: 14px;
@@ -1175,7 +1172,6 @@ body {
   color: var(--primary);
 }
 
-/* ICON */
 .faq-icon {
   width: 28px;
   height: 28px;
@@ -1207,7 +1203,6 @@ body {
   stroke: var(--white);
 }
 
-/* ANSWER */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -1225,6 +1220,7 @@ body {
   line-height: 1.75;
   color: var(--text-light);
 }
+
 
 /* ══════════════════════════════════════════════════════════════
    SECTION 10: FOOTER
@@ -1467,11 +1463,8 @@ body {
     display: none;
   }
 
-  .marquee-item {
-    font-size: 0.9rem;
-    padding: 0 18px;
-    gap: 14px;
-    letter-spacing: 1px;
+  .marquee-text {
+    font-size: 1.1rem;
   }
 
   .topic-item {
@@ -1550,7 +1543,6 @@ body {
 
   .hero-image-wrap img {
     max-width: 520px;
-    height: 480px;
   }
 
   .hero h1 {
@@ -1656,98 +1648,40 @@ body {
      DOUBLE MARQUEE STRIP
      ══════════════════════════════════════════════════════════════ -->
 <div class="marquee-double">
-
- <div class="marquee-strip-1">
+  <div class="marquee-strip-1">
     <div class="marquee-track marquee-track-left">
-
-      <span class="marquee-text">Affiliate Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Earn Money</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Digital Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Artificial Intelligence (AI)</span>
-      <span class="marquee-star">★</span>
-
-      <!-- repeat for smooth loop -->
-      <span class="marquee-text">Affiliate Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Earn Money</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Digital Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Artificial Intelligence (AI)</span>
-      <span class="marquee-star">★</span>
-
-      <!-- repeat for smooth loop -->
-      <span class="marquee-text">Affiliate Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Earn Money</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Digital Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Artificial Intelligence (AI)</span>
-      <span class="marquee-star">★</span>
-
-       
-
+      <span class="marquee-text">Affiliate Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Earn Money</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Digital Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Artificial Intelligence (AI)</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Affiliate Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Earn Money</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Digital Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Artificial Intelligence (AI)</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Affiliate Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Earn Money</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Digital Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Artificial Intelligence (AI)</span><span class="marquee-star">★</span>
     </div>
   </div>
-
   <div class="marquee-strip-2">
     <div class="marquee-track marquee-track-right">
-
-          <span class="marquee-text">Affiliate Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Earn Money</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Digital Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Artificial Intelligence (AI)</span>
-      <span class="marquee-star">★</span>
-
-      <!-- repeat for smooth loop -->
-      <span class="marquee-text">Affiliate Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Earn Money</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Digital Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Artificial Intelligence (AI)</span>
-      <span class="marquee-star">★</span>
-
-      <!-- repeat for smooth loop -->
-      <span class="marquee-text">Affiliate Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Earn Money</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Digital Marketing</span>
-      <span class="marquee-star">★</span>
-
-      <span class="marquee-text">Artificial Intelligence (AI)</span>
-      <span class="marquee-star">★</span>
-
+      <span class="marquee-text">Affiliate Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Earn Money</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Digital Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Artificial Intelligence (AI)</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Affiliate Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Earn Money</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Digital Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Artificial Intelligence (AI)</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Affiliate Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Earn Money</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Digital Marketing</span><span class="marquee-star">★</span>
+      <span class="marquee-text">Artificial Intelligence (AI)</span><span class="marquee-star">★</span>
     </div>
   </div>
-
 </div>
+
 
 <!-- ══════════════════════════════════════════════════════════════
      TOPICS — FREE FLOW MARQUEE STYLE
@@ -1759,79 +1693,41 @@ body {
       <p>Deep-dive guides across the topics that help you earn, grow, and succeed online</p>
     </div>
   </div>
-
   <div class="topics-slider-wrap">
     <div class="topics-track">
-
       <a href="https://affiliatemarketing.buzz/blog/affiliate-marketing" class="topic-item">
         <div class="topic-item-image"><img src="https://vcim.net/extra_mailer3/755_group-busy-people-working-office_1077205-2208.jpg" alt="Affiliate Marketing" /></div>
-        <div class="topic-item-footer">
-          <div class="topic-item-text"><h3>Affiliate Marketing</h3><span>Guides, Programs & Strategies</span></div>
-          <div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
-        </div>
+        <div class="topic-item-footer"><div class="topic-item-text"><h3>Affiliate Marketing</h3><span>Guides, Programs & Strategies</span></div><div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
       </a>
-
       <a href="https://affiliatemarketing.buzz/blog/earn-money" class="topic-item">
         <div class="topic-item-image"><img src="https://vcim.net/extra_mailer3/52_earn-money-background-increase-financial-investment_1029473-740735.jpg" alt="Earn Money" /></div>
-        <div class="topic-item-footer">
-          <div class="topic-item-text"><h3>Earn Money Online</h3><span>Side Hustles & Income Ideas</span></div>
-          <div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
-        </div>
+        <div class="topic-item-footer"><div class="topic-item-text"><h3>Earn Money Online</h3><span>Side Hustles & Income Ideas</span></div><div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
       </a>
-
       <a href="https://affiliatemarketing.buzz/blog/digital-marketing" class="topic-item">
         <div class="topic-item-image"><img src="https://vcim.net/extra_mailer3/244_02.jpg" alt="Digital Marketing" /></div>
-        <div class="topic-item-footer">
-          <div class="topic-item-text"><h3>Digital Marketing</h3><span>SEO, Email & Social Growth</span></div>
-          <div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
-        </div>
+        <div class="topic-item-footer"><div class="topic-item-text"><h3>Digital Marketing</h3><span>SEO, Email & Social Growth</span></div><div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
       </a>
-
       <a href="https://affiliatemarketing.buzz/blog/artificial-intelligence" class="topic-item">
         <div class="topic-item-image"><img src="https://vcim.net/extra_mailer3/521_magai-featured-photo-gen-ai-images-scaled.jpg" alt="AI" /></div>
-        <div class="topic-item-footer">
-          <div class="topic-item-text"><h3>Artificial Intelligence</h3><span>AI Tools, Trends & Guides</span></div>
-          <div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
-        </div>
+        <div class="topic-item-footer"><div class="topic-item-text"><h3>Artificial Intelligence</h3><span>AI Tools, Trends & Guides</span></div><div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
       </a>
-
-
-
-
-
-      <!-- Duplicate for seamless loop -->
+      <!-- Duplicate for loop -->
       <a href="https://affiliatemarketing.buzz/blog/affiliate-marketing" class="topic-item">
         <div class="topic-item-image"><img src="https://vcim.net/extra_mailer3/755_group-busy-people-working-office_1077205-2208.jpg" alt="Affiliate Marketing" /></div>
-        <div class="topic-item-footer">
-          <div class="topic-item-text"><h3>Affiliate Marketing</h3><span>Guides, Programs & Strategies</span></div>
-          <div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
-        </div>
+        <div class="topic-item-footer"><div class="topic-item-text"><h3>Affiliate Marketing</h3><span>Guides, Programs & Strategies</span></div><div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
       </a>
-
       <a href="https://affiliatemarketing.buzz/blog/earn-money" class="topic-item">
         <div class="topic-item-image"><img src="https://vcim.net/extra_mailer3/52_earn-money-background-increase-financial-investment_1029473-740735.jpg" alt="Earn Money" /></div>
-        <div class="topic-item-footer">
-          <div class="topic-item-text"><h3>Earn Money Online</h3><span>Side Hustles & Income Ideas</span></div>
-          <div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
-        </div>
+        <div class="topic-item-footer"><div class="topic-item-text"><h3>Earn Money Online</h3><span>Side Hustles & Income Ideas</span></div><div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
       </a>
-
       <a href="https://affiliatemarketing.buzz/blog/digital-marketing" class="topic-item">
         <div class="topic-item-image"><img src="https://vcim.net/extra_mailer3/244_02.jpg" alt="Digital Marketing" /></div>
-        <div class="topic-item-footer">
-          <div class="topic-item-text"><h3>Digital Marketing</h3><span>SEO, Email & Social Growth</span></div>
-          <div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
-        </div>
+        <div class="topic-item-footer"><div class="topic-item-text"><h3>Digital Marketing</h3><span>SEO, Email & Social Growth</span></div><div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
       </a>
-
       <a href="https://affiliatemarketing.buzz/blog/artificial-intelligence" class="topic-item">
         <div class="topic-item-image"><img src="https://vcim.net/extra_mailer3/521_magai-featured-photo-gen-ai-images-scaled.jpg" alt="AI" /></div>
-        <div class="topic-item-footer">
-          <div class="topic-item-text"><h3>Artificial Intelligence</h3><span>AI Tools, Trends & Guides</span></div>
-          <div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
-        </div>
+        <div class="topic-item-footer"><div class="topic-item-text"><h3>Artificial Intelligence</h3><span>AI Tools, Trends & Guides</span></div><div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div>
       </a>
-
     </div>
   </div>
 </section>
@@ -1876,8 +1772,7 @@ body {
     </div>
 
     <div class="blog-grid">
-
-      <!-- ALL (6 cards) -->
+      <!-- ALL (6) -->
       <div class="blog-card" data-category="all-only"><div class="blog-card-image"><img src="https://vcim.net/extra_mailer3/44_What-is-Affiliate-Marketing-banner.png" alt="" /><div class="blog-date"><span class="day">09</span><span class="month">Apr</span></div></div><div class="blog-card-body"><div class="blog-meta"><span>👤 By Vipul Gupta</span><span>📅 9 Apr 2026</span></div><h3>What is Affiliate Marketing and How Does It Work in 2026</h3><a href="https://affiliatemarketing.buzz/blog/affiliate-marketing/what-is-affiliate-marketing" class="read-more">Read More →</a></div></div>
 
       <div class="blog-card" data-category="all-only"><div class="blog-card-image"><img src="https://vcim.net/extra_mailer3/675_what-is-digital-marketing-banner.png" alt="" /><div class="blog-date"><span class="day">10</span><span class="month">Apr</span></div></div><div class="blog-card-body"><div class="blog-meta"><span>👤 By Vipul Gupta</span><span>📅 10 Apr 2026</span></div><h3>What Is Digital Marketing? The Complete 2026 Beginner's Guide</h3><a href="https://affiliatemarketing.buzz/blog/digital-marketing/what-is-digital-marketing/" class="read-more">Read More →</a></div></div>
@@ -1917,7 +1812,6 @@ body {
       <div class="blog-card hidden" data-category="ai"><div class="blog-card-image"><img src="https://vcim.net/extra_mailer3/947_gemini-vs-chatgpt-banner.png" alt="" /><div class="blog-date"><span class="day">13</span><span class="month">Apr</span></div></div><div class="blog-card-body"><div class="blog-meta"><span>👤 By Vipul Gupta</span><span>📅 13 Apr 2026</span></div><h3>Gemini vs. ChatGPT: Which Is Better in 2026?</h3><a href="https://affiliatemarketing.buzz/blog/artificial-intelligence/gemini-vs-chatgpt" class="read-more">Read More →</a></div></div>
 
       <div class="blog-card hidden" data-category="ai"><div class="blog-card-image"><img src="https://vcim.net/extra_mailer3/15_best-ai-tools-banner.png" alt="" /><div class="blog-date"><span class="day">13</span><span class="month">Apr</span></div></div><div class="blog-card-body"><div class="blog-meta"><span>👤 By Vipul Gupta</span><span>📅 13 Apr 2026</span></div><h3>5 Best AI Tools for Anyone and Everyone in 2026</h3><a href="https://affiliatemarketing.buzz/blog/artificial-intelligence/best-ai-tools" class="read-more">Read More →</a></div></div>
-
     </div>
 
     <div class="blog-read-more-wrap">
@@ -1927,7 +1821,6 @@ body {
       <a href="https://affiliatemarketing.buzz/blog/digital-marketing" class="blog-section-btn hidden" data-btn-filter="digital">View Digital Marketing Blogs →</a>
       <a href="https://affiliatemarketing.buzz/blog/artificial-intelligence" class="blog-section-btn hidden" data-btn-filter="ai">View Artificial Intelligence Blogs →</a>
     </div>
-
   </div>
 </section>
 
@@ -1941,37 +1834,38 @@ body {
       <img src="https://vcim.net/extra_mailer3/29_f03a4291-976d-4078-a78b-70351f0fe6f1.png" alt="FAQ" />
     </div>
     <div class="faq-content">
-<h2>Frequently Asked<br>Questions</h2>
-<p>Got questions? We've got answers. Here are the most common things people ask about affiliate marketing, earning money online, digital marketing, and artificial intelligence (AI).</p>
-<div class="faq-item">
-  <button class="faq-question">What are the best affiliate marketing strategies for beginners?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-  <div class="faq-answer"><p>The best strategies include choosing a profitable niche, creating valuable content, promoting products through blogs or social media, building trust with your audience, and using SEO to drive traffic.</p></div>
-</div>
+      <h2>Frequently Asked<br>Questions</h2>
+      <p>Got questions? We've got answers. Here are the most common things people ask about affiliate marketing, earning money online, digital marketing, and AI.</p>
 
-<div class="faq-item">
-  <button class="faq-question">What are the best ways to earn money online?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-  <div class="faq-answer"><p>Popular methods include affiliate marketing, freelancing, blogging, dropshipping, selling digital products, and creating content on platforms like YouTube or Instagram.</p></div>
-</div>
+      <div class="faq-item">
+        <button class="faq-question">What are the best affiliate marketing strategies for beginners?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-answer"><p>The best strategies include choosing a profitable niche, creating valuable content, promoting products through blogs or social media, building trust with your audience, and using SEO to drive traffic.</p></div>
+      </div>
 
-<div class="faq-item">
-  <button class="faq-question">What are the most effective digital marketing techniques?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-  <div class="faq-answer"><p>Effective techniques include SEO, content marketing, social media marketing, email marketing, influencer marketing, and paid ads like Google Ads and Facebook Ads.</p></div>
-</div>
+      <div class="faq-item">
+        <button class="faq-question">What are the best ways to earn money online?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-answer"><p>Popular methods include affiliate marketing, freelancing, blogging, dropshipping, selling digital products, and creating content on platforms like YouTube or Instagram.</p></div>
+      </div>
 
-<div class="faq-item">
-  <button class="faq-question">What are the main benefits of digital marketing?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-  <div class="faq-answer"><p>Digital marketing helps reach a global audience, is cost-effective, allows precise targeting, provides measurable results, and helps businesses grow faster online.</p></div>
-</div>
+      <div class="faq-item">
+        <button class="faq-question">What are the most effective digital marketing techniques?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-answer"><p>Effective techniques include SEO, content marketing, social media marketing, email marketing, influencer marketing, and paid ads like Google Ads and Facebook Ads.</p></div>
+      </div>
 
-<div class="faq-item">
-  <button class="faq-question">What are the most useful AI tools for online work?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-  <div class="faq-answer"><p>Some useful AI tools include ChatGPT for content writing, Canva AI for design, Jasper for marketing copy, and automation tools that help save time and improve productivity.</p></div>
-</div>
+      <div class="faq-item">
+        <button class="faq-question">What are the main benefits of digital marketing?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-answer"><p>Digital marketing helps reach a global audience, is cost-effective, allows precise targeting, provides measurable results, and helps businesses grow faster online.</p></div>
+      </div>
 
-<div class="faq-item">
-  <button class="faq-question">What are the future trends in AI and online business?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
-  <div class="faq-answer"><p>Future trends include AI automation, personalized marketing, voice search, chatbots, and AI-generated content, which are transforming how online businesses operate.</p></div>
-</div>
+      <div class="faq-item">
+        <button class="faq-question">What are the most useful AI tools for online work?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-answer"><p>Some useful AI tools include ChatGPT for content writing, Canva AI for design, Jasper for marketing copy, and automation tools that help save time and improve productivity.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are the future trends in AI and online business?<span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></button>
+        <div class="faq-answer"><p>Future trends include AI automation, personalized marketing, voice search, chatbots, and AI-generated content, which are transforming how online businesses operate.</p></div>
+      </div>
     </div>
   </div>
 </section>
