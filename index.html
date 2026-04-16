@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1091,6 +1092,139 @@ height: clamp(34px, 3vw, 40px);
 
 
 /* ══════════════════════════════════════════════════════════════
+   SECTION : case study
+   ══════════════════════════════════════════════════════════════ */
+
+.topics {
+  padding: 100px 0 80px;
+  background: var(--white);
+}
+
+.topics .section-title {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.topics .section-title h2 {
+  font-family: var(--font-body);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  color: var(--dark);
+  line-height: 1.25;
+}
+
+.topics .section-title p {
+  color: var(--text-light);
+  margin-top: 14px;
+  font-size: 1.15rem;
+}
+
+.topics-slider-wrap {
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.topics-track {
+  display: flex;
+  gap: 32px;
+  animation: topicsScroll 25s linear infinite;
+  width: max-content;
+  will-change: transform;
+}
+
+.topics-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes topicsScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.topic-item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 420px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.3s ease;
+}
+
+.topic-item:hover {
+  transform: translateY(-6px);
+}
+
+.topic-item-image {
+  width: 100%;
+  height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--light-bg);
+}
+
+.topic-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.topic-item:hover .topic-item-image img {
+  transform: scale(1.06);
+}
+
+.topic-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.topic-item-text h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.topic-item-text span {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.topic-item-arrow {
+  width: 46px;
+  height: 46px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.topic-item:hover .topic-item-arrow {
+  background: var(--primary-dark);
+  transform: scale(1.1);
+}
+
+.topic-item-arrow svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--white);
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
    SECTION 9: FAQ — WITH IMAGE
    ══════════════════════════════════════════════════════════════ */
 
@@ -1826,6 +1960,121 @@ height: clamp(34px, 3vw, 40px);
 
 
 <!-- ══════════════════════════════════════════════════════════════
+     TOPICS — case study
+     ══════════════════════════════════════════════════════════════ -->
+<section class="topics">
+  <div class="container">
+    <div class="section-title">
+      <h2>Case Studies</h2>
+      <p>Discover how we drives brands to meet their performance targets with excellence.</p>
+    </div>
+  </div>
+  <div class="topics-slider-wrap">
+    <div class="topics-track">
+<a href="https://www.vcommission.com/case-studies/food-warming-tray-case-study" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/List_page.jpg" alt="Slursh Food Warming Tray" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Slursh</h3><span>Food Warming Tray</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+
+<a href="https://www.vcommission.com/case-studies/airhelp-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2025/09/Thumbnail-1.jpg" alt="AirHelp Optimized Affiliate Strategy" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>AirHelp</h3><span>Optimized Affiliate Strategy</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/hostinger-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2025/08/Thumbnail_hostinger.jpg" alt="Hostinger Bring Your Idea Online" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Hostinger</h3><span>Bring Your Idea Online</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/slursh-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/slursh_banner.png?1" alt="Slursh Ice Cream Maker Tray" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Slursh</h3><span>Ice Cream Maker Tray</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/skimmylo-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/skymlo.png?1" alt="Skimmylo Backless Shapewear Bodysuit" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Skimmylo</h3><span>Backless Shapewear Bodysuit</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/elementor/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/ele.jpg?1" alt="Elementor The popular website builder" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Elementor</h3><span>The popular website builder</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/mx-player-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/mx.jpg" alt="Amazon MX Player The free video streaming service" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Amazon MX Player</h3><span>The free video streaming service</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/myntra-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/myntra.png" alt="Myntra Leading fashion & lifestyle platform" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Myntra</h3><span>Leading fashion & lifestyle platform</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+      <!-- Duplicate for loop -->
+
+<a href="https://www.vcommission.com/case-studies/food-warming-tray-case-study" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2026/03/List_page.jpg" alt="Slursh Food Warming Tray" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Slursh</h3><span>Food Warming Tray</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+
+<a href="https://www.vcommission.com/case-studies/airhelp-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2025/09/Thumbnail-1.jpg" alt="AirHelp Optimized Affiliate Strategy" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>AirHelp</h3><span>Optimized Affiliate Strategy</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/hostinger-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/uploads/2025/08/Thumbnail_hostinger.jpg" alt="Hostinger Bring Your Idea Online" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Hostinger</h3><span>Bring Your Idea Online</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/slursh-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/slursh_banner.png?1" alt="Slursh Ice Cream Maker Tray" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Slursh</h3><span>Ice Cream Maker Tray</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/skimmylo-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/skymlo.png?1" alt="Skimmylo Backless Shapewear Bodysuit" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Skimmylo</h3><span>Backless Shapewear Bodysuit</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/elementor/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/ele.jpg?1" alt="Elementor The popular website builder" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Elementor</h3><span>The popular website builder</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/mx-player-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/mx.jpg" alt="Amazon MX Player The free video streaming service" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Amazon MX Player</h3><span>The free video streaming service</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+<a href="https://www.vcommission.com/case-studies/myntra-case-study/" class="topic-item">
+<div class="topic-item-image"><img src="https://www.vcommission.com/wp-content/themes/vcommission/casestudies/img/case/myntra.png" alt="Myntra Leading fashion & lifestyle platform" /></div>
+<div class="topic-item-footer"><div class="topic-item-text"><h3>Myntra</h3><span>Leading fashion & lifestyle platform</span></div>
+<div class="topic-item-arrow"><svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div></div></a>
+
+
+   </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
      FAQ SECTION WITH IMAGE
      ══════════════════════════════════════════════════════════════ -->
 <section class="faq-section">
@@ -2038,5 +2287,6 @@ height: clamp(34px, 3vw, 40px);
 
 </script>
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"f3941641f81448b89facbbc9a289c3a4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
