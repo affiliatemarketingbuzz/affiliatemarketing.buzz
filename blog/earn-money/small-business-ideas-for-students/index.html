@@ -1,1 +1,1504 @@
-a
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>23 Easy Small Business Ideas for Students in 2026 With Low Investment</title>
+<link rel="icon" type="image/png" href="https://vcim.net/extra_mailer3/299_favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<meta name="description" content="Discover 23 easy small business ideas for students with low investment. Explore profitable, beginner-friendly ideas and tips to start earning while studying.">
+
+<style>
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 1: RESET & VARIABLES
+   ══════════════════════════════════════════════════════════════ */
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --accent: #c8f542;
+  --dark: #0f172a;
+  --text: #334155;
+  --text-light: #64748b;
+  --light-bg: #e8f4fc;
+  --white: #ffffff;
+  --border-light: #d1d5db;
+  --orange: #ff6b35;
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 44px rgba(0, 0, 0, 0.13);
+  --radius: 18px;
+  --radius-pill: 999px;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --font-body: 'DM Sans', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+  --max-width: 1800px;
+  --padding-x: 3.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-x);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 2: HEADER
+   ══════════════════════════════════════════════════════════════ */
+
+.header-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 22px var(--padding-x);
+  transition: background var(--transition-slow), box-shadow var(--transition-slow), padding var(--transition-slow);
+}
+
+.header-wrap.scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08);
+  padding: 14px var(--padding-x);
+}
+
+.header-capsule {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-pill);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-slow);
+  position: relative;
+}
+
+.header-wrap.scrolled .header-capsule {
+  box-shadow: none;
+  background: transparent;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav > li {
+  position: relative;
+}
+
+.nav > li > a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.nav > li > a:hover {
+  color: var(--primary);
+}
+
+.nav > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: var(--primary);
+  transition: width 0.3s;
+}
+
+.nav > li > a:hover::after {
+  width: 100%;
+}
+
+.nav-arrow {
+  width: 12px;
+  height: 12px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.3s;
+}
+
+.nav > li:hover .nav-arrow {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  padding: 10px 0;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 100;
+  list-style: none;
+}
+
+.nav > li:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown li a {
+  display: block;
+  padding: 11px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-dropdown li a:hover {
+  background: var(--light-bg);
+  color: var(--primary);
+}
+
+.btn-quote {
+  background: var(--accent);
+  color: var(--dark);
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 1.05rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.btn-quote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200, 245, 66, 0.4);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 2B: MOBILE MENU
+   ══════════════════════════════════════════════════════════════ */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 101;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--dark);
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--white);
+  z-index: 999;
+  padding: 100px 30px 40px;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-nav.open {
+  display: flex;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  display: block;
+}
+
+.mobile-nav a:hover {
+  color: var(--primary);
+}
+
+.mobile-dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--dark);
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 16px 0;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.mobile-dropdown-toggle svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--dark);
+  fill: none;
+  stroke-width: 2.5;
+  transition: transform 0.3s;
+}
+
+.mobile-dropdown-toggle.open svg {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-list {
+  display: none;
+  padding-left: 20px;
+}
+
+.mobile-dropdown-list.open {
+  display: block;
+}
+
+.mobile-dropdown-list a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-light);
+  padding: 12px 0;
+}
+
+.mobile-nav .btn-quote {
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 3: BLOG POST HERO
+   ══════════════════════════════════════════════════════════════ */
+
+.post-hero {
+  background: var(--light-bg);
+  padding: 160px 0 70px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='600' height='400' viewBox='0 0 600 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%232563eb' stroke-width='1' fill='none' opacity='0.08'%3E%3Cline x1='50' y1='0' x2='50' y2='400'/%3E%3Cline x1='100' y1='0' x2='100' y2='250'/%3E%3Cline x1='150' y1='0' x2='150' y2='180'/%3E%3Cline x1='200' y1='0' x2='200' y2='400'/%3E%3Cline x1='250' y1='0' x2='250' y2='120'/%3E%3Cline x1='300' y1='0' x2='300' y2='400'/%3E%3Cline x1='350' y1='0' x2='350' y2='200'/%3E%3Cline x1='400' y1='100' x2='400' y2='400'/%3E%3Cline x1='450' y1='0' x2='450' y2='300'/%3E%3Cline x1='500' y1='50' x2='500' y2='400'/%3E%3Ccircle cx='50' cy='100' r='3' fill='%232563eb'/%3E%3Ccircle cx='200' cy='200' r='3' fill='%232563eb'/%3E%3Ccircle cx='350' cy='200' r='3' fill='%232563eb'/%3E%3Ccircle cx='500' cy='150' r='3' fill='%232563eb'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 600px;
+  z-index: 0;
+}
+
+.post-hero h1 {
+  font-family: var(--font-body);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  color: var(--dark);
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.25;
+  padding: 0 20px;
+}
+
+.post-hero-meta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 4: POST FEATURED IMAGE
+   ══════════════════════════════════════════════════════════════ */
+
+.post-featured-image {
+  max-width: 900px;
+  margin: -40px auto 0;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.post-featured-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 5: POST CONTENT
+   ══════════════════════════════════════════════════════════════ */
+
+.post-content {
+  max-width: 820px;
+  margin: 50px auto 0;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.post-content h2 {
+  font-family: var(--font-body);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 40px 0 18px;
+}
+
+.post-content h3 {
+  font-family: var(--font-body);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 32px 0 14px;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}
+
+.post-content ul,
+.post-content ol {
+  margin: 16px 0 24px 24px;
+}
+
+.post-content li {
+  margin-bottom: 10px;
+}
+
+.post-content a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.post-content a:hover {
+  color: var(--primary-dark);
+}
+
+.post-content blockquote {
+  border-left: 4px solid var(--primary);
+  padding: 16px 24px;
+  margin: 28px 0;
+  background: var(--light-bg);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+.post-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 24px 0;
+}
+  .small-cta-btn {
+  display: inline-block;
+  padding: 12px 100px;
+  background: #96BA34;
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease;
+}
+
+.small-cta-btn:hover {
+  background: #96BA34;
+  color: #ffffff !important;
+  transform: translateY(-6px);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 6: FAQ ACCORDION
+   ══════════════════════════════════════════════════════════════ */
+
+.faq-section {
+  max-width: 820px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+}
+
+.faq-section h2 {
+  font-family: var(--font-body);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 28px;
+}
+
+.faq-item {
+  border: 1.5px solid var(--border-light);
+  border-radius: 14px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.faq-item.open {
+  border-color: var(--primary);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--dark);
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.3s;
+}
+
+.faq-item.open .faq-question {
+  color: var(--primary);
+}
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.faq-item.open .faq-icon {
+  background: var(--primary);
+  transform: rotate(45deg);
+}
+
+.faq-icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--primary);
+  stroke-width: 2.5;
+  fill: none;
+  stroke-linecap: round;
+  transition: stroke 0.3s;
+}
+
+.faq-item.open .faq-icon svg {
+  stroke: var(--white);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 24px;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 300px;
+  padding: 0 24px 20px;
+}
+
+.faq-answer p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-light);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 7: SHARE BUTTONS — ICON ONLY (CIRCULAR)
+   ══════════════════════════════════════════════════════════════ */
+
+.share-section {
+  max-width: 820px;
+  margin: 50px auto 0;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.share-section h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 0;
+  font-size: 0;
+}
+
+.share-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.share-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.share-whatsapp {
+  background: #25d366;
+}
+
+.share-twitter {
+  background: #1da1f2;
+}
+
+.share-facebook {
+  background: #1877f2;
+}
+
+.share-linkedin {
+  background: #0a66c2;
+}
+
+.share-copy {
+  background: var(--dark);
+}
+
+.share-copy svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.share-copy.copied {
+  background: #10b981;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 8: BACK TO BLOG — SMALL & CENTERED
+   ══════════════════════════════════════════════════════════════ */
+
+.back-to-blog {
+  max-width: 820px;
+  margin: 50px auto 80px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 9: FOOTER
+   ══════════════════════════════════════════════════════════════ */
+
+.footer {
+  background: linear-gradient(135deg, rgba(168, 207, 255, 1) 0%, rgba(148, 207, 255, 1) 32%, rgba(87, 185, 255, 1) 63%, rgba(25, 167, 255, 1) 100%);
+  padding: 70px 0 34px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+
+.footer-brand .logo {
+  color: var(--dark);
+  margin-bottom: 18px;
+  display: inline-flex;
+}
+
+.footer-brand .logo img {
+  height: 60px;
+  width: auto;
+}
+
+.footer-brand p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 360px;
+}
+
+.footer h4 {
+  color: var(--dark);
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.05rem;
+  transition: color var(--transition-base), padding-left var(--transition-base);
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+  padding-left: 8px;
+}
+
+.footer-subscribe p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1rem;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+.footer-subscribe-form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-subscribe-form input {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: var(--radius-pill);
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.footer-subscribe-form input:focus {
+  border-color: var(--primary);
+  background: var(--white);
+}
+
+.footer-subscribe-form input::placeholder {
+  color: var(--text-light);
+}
+
+.footer-subscribe-form button {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 14px 26px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.footer-subscribe-form button:hover {
+  background: var(--primary-dark);
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin-bottom: 24px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 10: SCROLL TO TOP
+   ══════════════════════════════════════════════════════════════ */
+
+.scroll-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--primary);
+  border: 1.5px solid rgba(37, 99, 235, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   SECTION 11: RESPONSIVE
+   ══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .btn-quote.desktop-only {
+    display: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-subscribe-form {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 640px) {
+
+  .post-hero {
+    padding: 130px 20px 50px;
+  }
+
+  .post-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .post-content {
+    font-size: 1rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.4rem;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     HEADER
+     ══════════════════════════════════════════════════════════════ -->
+<div class="header-wrap" id="headerWrap">
+  <header class="header-capsule">
+    <a href="https://affiliatemarketing.buzz/" class="logo">
+      <img src="https://vcim.net/extra_mailer3/236_logo.png" alt="Logo" />
+    </a>
+    <ul class="nav">
+      <li><a href="https://affiliatemarketing.buzz/">Home</a></li>
+      <li><a href="https://www.vcommission.com/affiliates/">Affiliates</a></li>
+      <li><a href="https://www.vcommission.com/advertisers/">Advertisers</a></li>
+      <li>
+        <a href="#blog">
+          Blog
+          <svg class="nav-arrow" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <ul class="nav-dropdown">
+          <li><a href="https://affiliatemarketing.buzz/blog/affiliate-marketing/">Affiliate Marketing</a></li>
+          <li><a href="https://affiliatemarketing.buzz/blog/earn-money/">Earn Money</a></li>
+          <li><a href="https://affiliatemarketing.buzz/blog/digital-marketing/">Digital Marketing</a></li>
+          <li><a href="https://affiliatemarketing.buzz/blog/artificial-intelligence/">Artificial Intelligence (AI)</a></li>
+        </ul>
+      </li>
+      <li><a href="https://www.vcommission.com/case-studies/">Case Studies</a></li>
+      <li><a href="https://affiliatemarketing.buzz/">Affiliate Programs</a></li>
+    </ul>
+    <a href="https://www.vcommission.com/affiliate/signup" class="btn-quote desktop-only">Be a Affiliate &rarr;</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+</div>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="https://affiliatemarketing.buzz/">Home</a>
+  <a href="https://www.vcommission.com/affiliates/">Affiliates</a>
+  <a href="https://www.vcommission.com/advertisers/">Advertisers</a>
+  <button class="mobile-dropdown-toggle" id="mobileBlogToggle">
+    Blog
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <div class="mobile-dropdown-list" id="mobileBlogList">
+    <a href="https://affiliatemarketing.buzz/blog/affiliate-marketing/">Affiliate Marketing</a>
+    <a href="https://affiliatemarketing.buzz/blog/earn-money/">Earn Money</a>
+    <a href="https://affiliatemarketing.buzz/blog/digital-marketing/">Digital Marketing</a>
+    <a href="https://affiliatemarketing.buzz/blog/artificial-intelligence/">Artificial Intelligence (AI)</a>
+  </div>
+  <a href="https://www.vcommission.com/case-studies/">Case Studies</a>
+  <a href="https://affiliatemarketing.buzz/">Affiliate Programs</a>
+  <a href="https://www.vcommission.com/affiliate/signup" class="btn-quote">Be a Affiliate &rarr;</a>
+</div>
+
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     POST HERO (change title here)
+     ══════════════════════════════════════════════════════════════ -->
+<section class="post-hero">
+  <h1>23 Easy Small Business Ideas for Students in 2026 With Low Investment
+
+</h1>
+  <div class="post-hero-meta">
+    <span>📁 Earn Money</span>
+    <span>📅 23 Apr 2026</span>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     POST FEATURED IMAGE
+     ══════════════════════════════════════════════════════════════ -->
+<div class="post-featured-image">
+  <img src="https://vcim.net/extra_mailer3/358_small-business-banner.png" alt="" />
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     POST CONTENT (replace with your blog content)
+     ══════════════════════════════════════════════════════════════ -->
+<article class="post-content">
+
+<p>Being a student doesn't mean waiting until graduation to start earning. The best small business ideas for students are ones that work around class schedules, require little to no startup capital, and build skills that pay off long after college ends.</p>
+
+<p>The good news is that 2026 offers more flexible income opportunities for students than ever before. From creative side hustles to online services, there are businesses you can run from your dorm room, between lectures, or during weekends — without sacrificing your grades.</p>
+
+<p>This guide covers 23 proven small business ideas for students that fit busy schedules. Each idea is selected for low startup cost, flexible time commitment, and genuine earning potential. Several of these also let you earn money online without needing a physical storefront or significant upfront investment.</p>
+
+<h2><strong>Online and Digital Business Ideas That Fit Student Life</strong></h2>
+
+<p>These businesses run entirely online — perfect for students who need flexibility and location independence.</p>
+
+<h3><strong>1. Affiliate Marketing</strong></h3>
+
+<img src="https://vcim.net/extra_mailer3/86_Affiliate-Marketing.png" alt="Affiliate Marketing">
+
+<p><strong><a href="https://www.vcommission.com/">Affiliate marketing</a></strong> lets you earn commissions by recommending products through unique referral links. You don't create products, handle shipping, or manage customer support — you just connect your audience with products they'd genuinely benefit from.</p>
+
+<p>As a student, you can start by joining beginner-friendly programs like Amazon Associates, Meesho, or Flipkart Affiliate. Create content around products you already use — tech gadgets, study tools, dorm essentials, or textbooks — on a blog, YouTube channel, Instagram, or even WhatsApp groups.</p>
+
+<p>The key is choosing a niche you know well. A computer science student reviewing coding tools or a fitness enthusiast reviewing workout gear creates authentic content that converts because the recommendations come from real experience. Start with one platform, publish consistently, and let affiliate commissions compound over time as your content library grows.</p>
+
+<div style="text-align:center; margin:25px 0;">
+<a href="https://vcommission.com" class="small-cta-btn">
+Join Now
+</a>
+</div>
+
+<h3><strong>2. Social Media Management</strong></h3>
+
+<p>Every local business — restaurants, salons, coaching centers, boutiques — needs social media help, and most owners don't have the time or skills to manage it themselves. As a student who's grown up on Instagram, TikTok, and Facebook, you already understand how these platforms work intuitively.</p>
+
+<p>A basic social media management package includes creating 3–5 posts per week, writing captions with hashtags, designing graphics in Canva, and responding to comments and messages. This is practical digital marketing work that businesses pay real money for.</p>
+
+<p>Start by approaching local businesses near your campus. Offer a free two-week trial to demonstrate results, then convert to a paid monthly retainer of ₹3,000–₹8,000 per client. Managing just 3 clients alongside your studies creates consistent monthly income while building a portfolio that's valuable well beyond college.</p>
+
+<h3><strong>3. Blogging</strong></h3>
+
+<p>Blogging remains one of the most sustainable student businesses because content you create today generates traffic and income for years. Pick a topic you're passionate about — study tips, college life, technology, personal finance, fitness, or any niche with consistent search demand.</p>
+
+<p>Set up a free blog on WordPress.com or Blogger to start. Publish 2–3 well-researched articles per week targeting long-tail keywords your audience actually searches for. As traffic grows, monetize through Google AdSense display ads, affiliate product recommendations, and eventually sponsored posts from brands.</p>
+
+<p>The beauty of blogging as a student business is compounding returns. A blog post ranking on Google's first page generates free organic traffic indefinitely. Students who start blogging in their first year often have profitable sites by graduation — creating an income stream that continues into their professional careers. You can also <strong><a href="https://affiliatemarketing.buzz/blog/earn-money/earn-money-using-whatsapp/">earn from WhatsApp</a></strong> by sharing your blog posts in relevant groups, driving additional traffic to your monetized content.</p>
+
+<h3><strong>4. Pet Sitting and Dog Walking</strong></h3>
+
+<p>If you love animals, pet sitting and dog walking offer flexible earning around class schedules. Neighbors, faculty members, and local families regularly need reliable pet care — especially during work hours or travel. Advertise through campus notice boards, local WhatsApp groups, and neighborhood apps. Charge ₹300–₹500 per walk or ₹500–₹1,000 per day for sitting.</p>
+
+<h3><strong>5. YouTube Channel</strong></h3>
+
+<p>Start a YouTube channel around any topic you're knowledgeable about — study techniques, tech reviews, cooking, campus life, or gaming. Consistency matters more than expensive equipment; your smartphone camera is enough. Monetize through the YouTube Partner Program (ads), affiliate links in descriptions, and brand sponsorships once your audience grows.</p>
+
+<h3><strong>6. Candle Making</strong></h3>
+
+<p>Handmade candles sell well on Etsy, Instagram, and local markets. Starter kits cost ₹1,000–₹2,000 and produce enough candles for significant markup. Focus on unique scents, aesthetic packaging, and seasonal collections (festival candles, exam stress-relief candles). Sell through Instagram, WhatsApp catalogs, and campus events.</p>
+
+<h3><strong>7. Food Photography</strong></h3>
+
+<p>Restaurants, food bloggers, and cloud kitchens constantly need appetizing food photos. If you have a smartphone with a good camera and an eye for composition, food photography is a sellable skill. Build a portfolio by photographing meals at local eateries, then pitch your services. Charge ₹500–₹2,000 per session.</p>
+
+<h3><strong>8. Renting Out College Textbooks</strong></h3>
+
+<p>Buy textbooks at end-of-semester discounts and rent them to incoming students at a fraction of retail price. This solves a genuine pain point — textbooks are expensive, and most students only need them for one semester. Manage rentals through a simple spreadsheet and WhatsApp group. Minimal effort, consistent semester-over-semester income.</p>
+
+<h3><strong>9. Online Gaming Streamer</strong></h3>
+
+<p>If you're skilled at gaming, platforms like Twitch and YouTube Gaming let you monetize your hobby. Stream regularly, build a community, and earn through subscriptions, donations, sponsorships, and affiliate links to gaming gear. It takes time to build an audience, but the most dedicated student streamers earn meaningful side income.</p>
+
+<h3><strong>10. Personalized Stationery Business</strong></h3>
+
+<p>Custom notebooks, planners, bookmarks, and stationery sets sell well — especially among fellow students. Design templates in Canva, use print-on-demand services or local printing, and sell through Instagram and campus events. Personalized items (name-printed journals, custom planner covers) command higher prices than generic alternatives.</p>
+
+<h2><strong>Creative and Handmade Business Ideas for Students</strong></h2>
+
+<img src="https://vcim.net/extra_mailer3/581_Untitled design (4).png" alt="Image 2">
+
+<p>These ideas leverage creativity and craftsmanship — perfect for students with artistic skills.</p>
+
+<h3><strong>11. Translation Services</strong></h3>
+
+<p>If you're bilingual or multilingual, translation services are in constant demand from businesses, content creators, and academic institutions. Offer translation on Fiverr and Upwork for documents, websites, subtitles, and marketing materials. Specialized fields like legal, medical, or technical translation command premium rates.</p>
+
+<h3><strong>12. Custom Sticker Business</strong></h3>
+
+<p>Custom stickers are low-cost to produce and high-margin to sell. Design stickers using Canva or Procreate, print through affordable suppliers, and sell on Etsy, Instagram, or at campus events. Laptop stickers, planner stickers, and aesthetic quote stickers are consistently popular among students and young buyers.</p>
+
+<h3><strong>13. Custom Illustration</strong></h3>
+
+<p>If you can draw — digitally or traditionally — custom illustrations are a profitable student business. Offer portrait illustrations, pet portraits, couple illustrations, and social media avatar designs on Fiverr, Instagram, and Etsy. Digital illustration using Procreate or Adobe Illustrator keeps costs near zero with high profit margins.</p>
+
+<h3><strong>14. Handmade Jewelry</strong></h3>
+
+<p>Beaded bracelets, wire-wrapped rings, resin jewelry, and polymer clay earrings are popular handmade products with strong margins. Source materials affordably, create unique designs, and sell through Instagram, Etsy, WhatsApp catalogs, and campus pop-up events. Festival seasons and gifting occasions drive significant spikes in demand.</p>
+
+<h3><strong>15. Resume Writing Services</strong></h3>
+
+<p>Most students and fresh graduates struggle with resume writing. If you understand formatting, keyword optimization, and professional presentation, offer resume writing and LinkedIn profile optimization services. Charge ₹500–₹2,000 per resume. Market through campus career centers, LinkedIn, and student WhatsApp groups.</p>
+
+<h3><strong>16. Gift Basket Creation</strong></h3>
+
+<p>Curated gift baskets for birthdays, festivals, exams, and celebrations sell well — especially around campus. Source affordable items (snacks, candles, stationery, skincare samples), package them attractively, and sell through Instagram and WhatsApp. Custom baskets command ₹500–₹2,000+ depending on contents.</p>
+
+<h2><strong>Freelance and Service-Based Student Business Ideas</strong></h2>
+
+<img src="https://vcim.net/extra_mailer3/291_Untitled design (5).png" alt="Image 1">
+
+<p>These businesses monetize skills directly — offering services that clients pay for on a project or hourly basis.</p>
+
+<h3><strong>17. Freelance Writing</strong></h3>
+
+<p>If you write well, businesses need your skill for blog posts, product descriptions, social media content, and email newsletters. Start on Fiverr or Upwork with competitive pricing, build reviews through quality work, then increase rates. Freelance writing scales easily alongside a student schedule.</p>
+
+<h3><strong>18. 3D Printing Services</strong></h3>
+
+<p>If you have access to a 3D printer (many universities have them), offer custom printing services — phone cases, figurines, prototypes, and personalized gifts. Market through campus communities and Instagram. Low material costs and high perceived value make this a profitable niche student business.</p>
+
+<h3><strong>19. Graphic Design Services</strong></h3>
+
+<p>Every business and student organization needs visual content — logos, social media posts, event posters, presentations, and flyers. Learn Canva (free) or Adobe Illustrator and offer design services on Fiverr, to local businesses, or within your campus community. Design skills transfer directly into career opportunities.</p>
+
+<h3><strong>20. Podcasting</strong></h3>
+
+<p>Start a podcast about a topic you're passionate about — student life, career advice, niche hobbies, or interviews with interesting people. Record on your phone, edit with free software, and distribute through Spotify and Apple Podcasts. Monetize through sponsorships, listener support, and affiliate product mentions as your audience grows.</p>
+
+<h3><strong>21. Online Surveys and Market Research</strong></h3>
+
+<p>Platforms like Swagbucks, Toluna, and Google Opinion Rewards pay for completing surveys and participating in market research. Earnings are modest (₹100–₹300 daily), but the work is flexible and requires zero skills. Best treated as supplemental pocket money while building more substantial student businesses.</p>
+
+<h3><strong>22. Print and Cut Shop</strong></h3>
+
+<p>Offer custom printing and cutting services — vinyl decals, iron-on transfers, custom t-shirts, and event banners. A basic cutting machine (like Cricut) costs ₹15,000–₹25,000 and pays for itself quickly through orders. Market through Instagram, campus events, and student organization partnerships.</p>
+
+<h3><strong>23. Virtual Assistant</strong></h3>
+
+<p>Busy entrepreneurs and small business owners need help with email management, calendar scheduling, data entry, research, and social media tasks. Offer virtual assistant services on Fiverr, Upwork, or through direct outreach on LinkedIn. Rates start at ₹300–₹800/hour, and the work fits easily around class schedules.</p>
+
+<h2><strong>How to Start Your Student Business Without Overwhelm</strong></h2>
+
+<p>Choosing from 23 ideas can feel paralyzing. Here's how to pick and start without overthinking.</p>
+
+<img src="https://vcim.net/extra_mailer3/735_Start-Business-after-study.jpg" alt="Start Business After Study">
+
+<h3><strong>Start With Skills You Already Have</strong></h3>
+
+<p>Don't learn a new skill just to start a business. If you write well, start freelance writing or blogging. If you're creative, try stickers, illustrations, or jewelry. If you're organized, offer virtual assistant services. The fastest path to income is monetizing what you already know.</p>
+
+<h3><strong>Begin With Zero or Near-Zero Investment</strong></h3>
+
+<p>Most ideas on this list require nothing more than a smartphone, internet connection, and free tools like Canva, WordPress, or social media accounts. Avoid businesses that require significant upfront investment until you've validated demand with a low-cost version first.</p>
+
+<h3><strong>Treat It Like a Schedule Block, Not a Full-Time Job</strong></h3>
+
+<p>Dedicate specific hours each week to your business — just like a class. Two focused hours daily is enough to build meaningful momentum. Consistency beats intensity. A student who works on their business for 10 hours every week for six months will out-earn someone who burns out after a two-week sprint.</p>
+
+<h3><strong>Track Your Income From Day One</strong></h3>
+
+<p>Use a simple Google Sheets spreadsheet to track every rupee earned and spent. Understanding your numbers helps you identify which activities generate the most income per hour — so you can double down on what works and drop what doesn't.</p>
+
+<p>As your student business grows, consider exploring established <strong><a href="https://www.vcommission.com/">affiliate network</a></strong> platforms to add passive commission income alongside your primary business. Many of the tools, products, and services you already use and recommend can be monetized through affiliate partnerships — creating an additional revenue stream that requires minimal extra effort.</p>
+
+<h2><strong>Conclusion</strong></h2>
+
+<p>The best small business ideas for students are ones that match your existing skills, fit your schedule, and start generating income without significant investment. From affiliate marketing and blogging to handmade products and freelance services, every idea on this list has been proven by real students building real income alongside their studies.</p>
+
+<p>You don't need to choose the "perfect" idea. You need to choose one, start this week, and improve as you go. The skills you build — marketing, communication, financial management, client relationships — will serve you far longer than any single business venture.</p>
+
+<p>Pick the idea that excites you most, dedicate consistent weekly hours, and let compounding effort turn a student side hustle into something that surprises you.</p>
+</article>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     FAQ SECTION
+     ══════════════════════════════════════════════════════════════ -->
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      What is the easiest small business idea for college students with no money?
+      <span class="faq-icon">
+        <svg viewBox="0 0 24 24">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+      </span>
+    </button>
+    <div class="faq-answer">
+      <p>Freelance writing, social media management, and affiliate marketing are great options that require little to no investment. You only need a smartphone, internet connection, and consistency.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      How much can students realistically earn from a small side business?
+      <span class="faq-icon">
+        <svg viewBox="0 0 24 24">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+      </span>
+    </button>
+    <div class="faq-answer">
+      <p>Most students earn around ₹5,000–₹15,000 per month within a few months. With consistency, this can grow to ₹30,000 or more over time.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Can I run a small business while studying full-time without affecting grades?
+      <span class="faq-icon">
+        <svg viewBox="0 0 24 24">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+      </span>
+    </button>
+    <div class="faq-answer">
+      <p>Yes, by managing your time properly. Spending 8–12 hours per week on your business is usually enough without negatively impacting your studies.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Which student business ideas have the best long-term earning potential?
+      <span class="faq-icon">
+        <svg viewBox="0 0 24 24">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+      </span>
+    </button>
+    <div class="faq-answer">
+      <p>Blogging, affiliate marketing, YouTube, and graphic design offer strong long-term growth. These build skills and assets that can turn into full-time careers.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      Do I need to register my student business legally to start earning?
+      <span class="faq-icon">
+        <svg viewBox="0 0 24 24">
+          <line x1="12" y1="5" x2="12" y2="19"/>
+          <line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+      </span>
+    </button>
+    <div class="faq-answer">
+      <p>For small earnings, formal registration is usually not required initially. As your income grows, it’s advisable to check tax rules and consider proper registration.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SHARE BUTTONS — ICON ONLY
+     ══════════════════════════════════════════════════════════════ -->
+<section class="share-section">
+  <h3>Share This Post</h3>
+  <div class="share-buttons">
+
+    <a href="#" class="share-btn share-whatsapp" id="shareWhatsapp" title="WhatsApp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.637-1.467A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.115 0-4.09-.57-5.793-1.564l-.416-.248-4.313 1.366 1.42-4.186-.272-.432A9.708 9.708 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+    </a>
+
+    <a href="#" class="share-btn share-twitter" id="shareTwitter" title="Twitter" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+    </a>
+
+    <a href="#" class="share-btn share-facebook" id="shareFacebook" title="Facebook" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+
+    <a href="#" class="share-btn share-linkedin" id="shareLinkedin" title="LinkedIn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+
+    <button class="share-btn share-copy" id="shareCopy" title="Copy Link">
+      <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+    </button>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     BACK TO BLOG
+     ══════════════════════════════════════════════════════════════ -->
+<div class="back-to-blog">
+  <a href="https://affiliatemarketing.buzz/blog/earn-money/" class="back-btn">&larr; Back to Earn Money blog</a>
+</div>
+<!-- ══════════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="https://affiliatemarketing.buzz/" class="logo">
+          <img src="https://vcim.net/extra_mailer3/236_logo.png" alt="Logo" />
+        </a>
+        <p>Learn how to make money online with affiliate marketing, AI tools, and digital marketing strategies. Find the best platforms and proven ways to increase your earnings</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="https://affiliatemarketing.buzz/">Home</a></li>
+          <li><a href="https://affiliatemarketing.buzz/blog/affiliate-marketing/">Affiliate Marketing</a></li>
+          <li><a href="https://affiliatemarketing.buzz/blog/earn-money/">Earn Money</a></li>
+          <li><a href="https://affiliatemarketing.buzz/blog/digital-marketing/">Digital Marketing</a></li>
+          <li><a href="https://affiliatemarketing.buzz/blog/artificial-intelligence/">Artificial Intelligence (AI)</a></li>
+          <li><a href="https://www.vcommission.com/case-studies/">Case Study</a></li>
+        </ul>
+
+      </div>
+      <div class="footer-subscribe">
+        <h4>Subscribe for Updates</h4>
+        <p>Get the latest news and insights delivered to your inbox. No spam, just value.</p>
+        <form name="footer-subscribe-form" class="footer-subscribe-form">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span>&copy; 2026 AffiliateMarketing.buzz All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     SCROLL TO TOP
+     ══════════════════════════════════════════════════════════════ -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════════════════════════════ -->
+<script>
+
+  /* ── Sticky header & scroll-to-top ── */
+  const headerWrap = document.getElementById('headerWrap');
+  const scrollBtn = document.getElementById('scrollTop');
+
+  window.addEventListener('scroll', () => {
+    headerWrap.classList.toggle('scrolled', window.scrollY > 60);
+    scrollBtn.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+
+  /* ── Mobile menu ── */
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileNav = document.getElementById('mobileNav');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileNav.classList.toggle('open');
+    document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+  });
+
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.classList.remove('active');
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  const mobileBlogToggle = document.getElementById('mobileBlogToggle');
+  const mobileBlogList = document.getElementById('mobileBlogList');
+
+  mobileBlogToggle.addEventListener('click', () => {
+    mobileBlogToggle.classList.toggle('open');
+    mobileBlogList.classList.toggle('open');
+  });
+
+
+  /* ── FAQ Accordion ── */
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item').forEach(faq => {
+        faq.classList.remove('open');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+
+
+  /* ── Share Buttons ── */
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  document.getElementById('shareWhatsapp').href =
+    'https://api.whatsapp.com/send?text=' + pageTitle + '%20' + pageUrl;
+
+  document.getElementById('shareTwitter').href =
+    'https://twitter.com/intent/tweet?text=' + pageTitle + '&url=' + pageUrl;
+
+  document.getElementById('shareFacebook').href =
+    'https://www.facebook.com/sharer/sharer.php?u=' + pageUrl;
+
+  document.getElementById('shareLinkedin').href =
+    'https://www.linkedin.com/sharing/share-offsite/?url=' + pageUrl;
+
+  document.getElementById('shareCopy').addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.getElementById('shareCopy');
+      btn.classList.add('copied');
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
+      }, 2000);
+    });
+  });
+
+
+  /* ══════════════════════════════════════════════════════════════
+     GOOGLE APPS SCRIPT INTEGRATION (Footer Newsletter)
+     ══════════════════════════════════════════════════════════════ */
+
+  const scriptURL1 = 'https://script.google.com/macros/s/AKfycby_x2S0pOEQL2zCzTXydrx2h_zZm2HPx3VFQUASZpYLUGBD9EvhsycpI644qKPHIFhe/exec';
+
+  const form2 = document.querySelector('form[name="footer-subscribe-form"]');
+  if (form2) {
+    form2.addEventListener('submit', function(e) {
+      if (form2.checkValidity()) {
+        e.preventDefault();
+        const btn = form2.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        const originalText = btn.innerText;
+        btn.innerText = 'Processing...';
+
+        fetch(scriptURL1, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: new FormData(form2)
+        })
+        .then(() => {
+          alert("Thank you for signing up for our newsletter!");
+          form2.reset();
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          alert("Something went wrong. Please try again.");
+        })
+        .finally(() => {
+          btn.disabled = false;
+          btn.innerText = originalText;
+        });
+      }
+    });
+  }
+
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"f3941641f81448b89facbbc9a289c3a4","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
