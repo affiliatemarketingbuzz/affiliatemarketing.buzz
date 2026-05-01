@@ -2145,6 +2145,41 @@ height: clamp(34px, 3vw, 40px);
     });
   }
 
+    /* ── Header and footer  ── */
+  fetch('/header.html')
+
+    .then(res => res.text())
+
+    .then(html => {
+
+      document.getElementById('header-placeholder').innerHTML = html;
+
+    });
+
+  fetch('/footer.html')
+
+    .then(res => res.text())
+
+    .then(html => {
+
+      document.getElementById('footer-placeholder').innerHTML = html;
+
+      const scripts = document.getElementById('footer-placeholder').querySelectorAll('script');
+
+      scripts.forEach(oldScript => {
+
+        const newScript = document.createElement('script');
+
+        newScript.textContent = oldScript.textContent;
+
+        document.body.appendChild(newScript);
+
+        oldScript.remove();
+
+      });
+
+    });
+
   
 
 </script>
