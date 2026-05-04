@@ -1193,24 +1193,7 @@ body {
   });
 
 
-  /* ── Load More ── */
-  const loadMoreBtn = document.getElementById('loadMoreBtn');
-
-  loadMoreBtn.addEventListener('click', () => {
-    const hidden = document.querySelectorAll('.post-card.hidden-post');
-    let count = 0;
-
-    hidden.forEach(post => {
-      if (count < 8) {
-        post.classList.remove('hidden-post');
-        count++;
-      }
-    });
-
-    if (document.querySelectorAll('.post-card.hidden-post').length === 0) {
-      loadMoreBtn.classList.add('hidden-btn');
-    }
-  });
+ 
 
     /* ── Header and footer  ── */
 
